@@ -20,8 +20,8 @@ pipeline {
                   /tmp/apic --help
                   /tmp/apic client-creds:set credentials-binary/credentials.json
                   /tmp/apic login --username  uuuuuu  --server https://uuuuuuu.com  --realm provider/default-idp-2
-                  #/tmp/apiclogin --username  uuuuuuu --password ppppppppppp --server https://uuuuuuu.com  --realm provider/default-idp-2
-                  #/tmp/apic products:publish --server https://uuuuuuu.com --catalog sandbox --org bot m.yaml
+                  /tmp/apiclogin --username  uuuuuuu --password ppppppppppp --server https://uuuuuuu.com  --realm provider/default-idp-2
+                  /tmp/apic products:publish --server https://uuuuuuu.com --catalog sandbox --org bot product-automate.yaml
               '''
             }
         }
