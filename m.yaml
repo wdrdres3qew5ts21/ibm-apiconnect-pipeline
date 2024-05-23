@@ -1,0 +1,30 @@
+info:
+  version: 1.0.0
+  title: mockcmock
+  name: mockcmock
+gateways:
+  - datapower-api-gateway
+plans:
+  default-plan:
+    title: Default Plan
+    description: Default Plan
+    rate-limits:
+      default:
+        value: 100/1hour
+    apis:
+      uploadpdf1.0.0: {}
+apis:
+  uploadpdf1.0.0:
+    $ref: cli-api.yaml
+visibility:
+  view:
+    type: public
+    orgs: []
+    tags: []
+    enabled: true
+  subscribe:
+    type: authenticated
+    orgs: []
+    tags: []
+    enabled: true
+product: 1.0.0

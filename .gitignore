@@ -1,0 +1,3 @@
+credentials-binary/apic
+credentials-binary/*.md
+Jenkinsfile

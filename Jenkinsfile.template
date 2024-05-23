@@ -1,0 +1,32 @@
+pipeline {
+    agent {
+        any { image 'docker.io/node:20.11.1-alpine3.19' }
+    }
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage("Docker Build") {
+            steps {
+              sh '''
+                  #oc start-build --from-build=<build_name>
+                  #oc start-build -F red-api --from-dir=./api/
+                  rm -rf ibm-apiconnect-pipeline > /dev/null
+                  git clone https://github.com/wdrdres3qew5ts21/ibm-apiconnect-pipeline > /dev/null
+                  cd ibm-apiconnect-pipeline 
+                  #oc get pod
+                  /tmp/apic --help
+                  /tmp/apic client-creds:set credentials-binary/credentials.json
+                  /tmp/apic login --username  uuuuuu  --server https://uuuuuuu.com  --realm provider/default-idp-2
+                  #/tmp/apiclogin --username  uuuuuuu --password ppppppppppp --server https://uuuuuuu.com  --realm provider/default-idp-2
+                  #/tmp/apic products:publish --server https://uuuuuuu.com --catalog sandbox --org bot m.yaml
+              '''
+            }
+        }
+    }
+}
+
+
+

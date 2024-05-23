@@ -1,0 +1,30 @@
+info:
+  version: 1.0.0
+  title: OCB-Product-Automate
+  name: ocb-product-automate
+gateways:
+  - datapower-api-gateway
+plans:
+  default-plan:
+    title: Default Plan
+    description: Default Plan
+    rate-limits:
+      default:
+        value: 100/1hour
+    apis:
+      swagger-petstore88: {}
+apis:
+  swagger-petstore88:
+    name: swagger-petstore:88
+visibility:
+  view:
+    type: public
+    orgs: []
+    tags: []
+    enabled: true
+  subscribe:
+    type: authenticated
+    orgs: []
+    tags: []
+    enabled: true
+product: 1.0.0
